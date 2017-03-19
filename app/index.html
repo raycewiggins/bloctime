@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="blocPomodoro">
+  <head>
+    <meta charset="utf-8">
+    <title>Bloc Pomodoro</title>
+    <!--css files and bootstrap-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <!--libraries-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.0/buzz.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <!--core functionality files-->
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/time-formatter/time-formatter.filter.js"></script>
+
+    <script src="core/firebase-sdk.js"></script>
+    <script src="core/task/task.module.js"></script>
+    <script src="core/task/task.service.js"></script>
+    <!--components-->
+    <script src="timer/timer.module.js"></script>
+    <script src="timer/timer.component.js"></script>
+    <script src="tasks/tasks.module.js"></script>
+    <script src="tasks/tasks.component.js"></script>
+  </head>
+  <body>
+
+    <timer></timer>
+    <tasks></tasks>
+
+  </body>
+</html>

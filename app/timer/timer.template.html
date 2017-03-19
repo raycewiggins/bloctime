@@ -1,0 +1,16 @@
+<div class="completed-sessions">Completed sessions: {{$ctrl.completedSessions}}</div>
+<div class="timer">
+  <div class="current-time">{{$ctrl.currentSeconds | timeFormatter }}</div>
+
+  <div class="buttons">
+    <div class="work" ng-show="!$ctrl.onBreak">
+      <button ng-click="$ctrl.timerStart($ctrl.currentSeconds)" ng-show="$ctrl.timerIsOff">Start Work</button>
+      <button ng-click="$ctrl.timerReset()" ng-show="!$ctrl.timerIsOff">Reset Work Timer</button>
+    </div>
+
+    <div class="break">
+      <button ng-click="$ctrl.breakTimer($ctrl.currentSeconds)" ng-show="$ctrl.breakPossible && !$ctrl.canCancel">Start Break</button>
+      <button ng-click="$ctrl.breakReset()" ng-show="!$ctrl.timerIsOff && $ctrl.canCancel">Cancel Break</button>
+    </div>
+  </div>
+</div>

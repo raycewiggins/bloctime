@@ -1,0 +1,6 @@
+<h1 class="tasks">Task history</h1>
+<input ng-model="$ctrl.newTask"></input>
+<button ng-click="$ctrl.addTask()">Add Task</button>
+<div ng-repeat="task in $ctrl.allTasks | orderBy:reverse:true">
+  <input type="checkbox" ng-click="$ctrl.removeTask(task)">{{task.$value}}</input>
+</div>
